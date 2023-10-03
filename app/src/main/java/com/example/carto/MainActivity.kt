@@ -55,7 +55,7 @@ fun TextoCartao(){
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(535.dp),
+        verticalArrangement = Arrangement.spacedBy(530.dp),
         modifier = Modifier.fillMaxSize()
 
         ){
