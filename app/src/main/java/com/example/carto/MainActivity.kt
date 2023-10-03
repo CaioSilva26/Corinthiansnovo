@@ -7,6 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -55,7 +56,7 @@ fun TextoCartao(){
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(530.dp),
+        verticalArrangement = Arrangement.spacedBy(15.dp),
         modifier = Modifier.fillMaxSize()
 
         ){
@@ -63,7 +64,7 @@ fun TextoCartao(){
 
         Text(
             text = "Salve o Corinthians",
-            fontSize = 50.sp,
+            fontSize = 40.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Black,
             fontFamily = FontFamily.Default,
@@ -73,18 +74,32 @@ fun TextoCartao(){
         )
         Text(
             text = "Por que tá foda",
-            fontSize = 35.sp,
+            fontSize = 27.sp,
             textAlign = TextAlign.Center,
             color = Color.Gray,
-            modifier = Modifier.fillMaxSize().padding(top = 30.dp)
-
-            
-
-
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 20.dp)
 
         )
+        Dedicatoria(nomes = "De: Caio")
+        Dedicatoria(nomes = " Para: Todos")
     }
 
 }
 
+@Composable
+fun Dedicatoria(nomes: String){
+    Text(
+        text = nomes,
+        fontSize = 24.sp,
+        textAlign = TextAlign.End,
+        fontWeight = FontWeight.Black,
+        fontFamily = FontFamily.Default,
+        color = Color.Gray,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 10.dp)
+    )
+}
 
