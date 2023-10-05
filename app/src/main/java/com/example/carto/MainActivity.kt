@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -44,42 +45,48 @@ class MainActivity : ComponentActivity() {
 fun TextoCartao(){
 
 
+Box {
 
 
     Image(
-        painter = painterResource(id = R.drawable.corinthians),
-        contentDescription =null,
+        painter = painterResource(id = R.drawable.vai_timao),
+        contentDescription = null,
         contentScale = ContentScale.Crop,
         alpha = 1.2F,
         modifier = Modifier.fillMaxSize()
-    )
 
+
+    )
+}
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(15.dp),
+        verticalArrangement = Arrangement.spacedBy(13.dp),
         modifier = Modifier.fillMaxSize()
+
 
         ){
 
 
         Text(
-            text = "Salve o Corinthians",
+            text = "Corinthians",
             fontSize = 40.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Black,
             fontFamily = FontFamily.Default,
             lineHeight = 60.sp,
-            color = Color.Gray,
+            color = Color.White,
+
 
         )
         Text(
-            text = "Por que tá foda",
+            text = "Alvinegro",
             fontSize = 27.sp,
             textAlign = TextAlign.Center,
-            color = Color.Gray,
+            fontWeight = FontWeight.Black,
+            color = Color.White,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = 20.dp)
+                .padding(bottom = 500.dp)
 
         )
         Dedicatoria(nomes = "De: Caio")
@@ -94,12 +101,15 @@ fun Dedicatoria(nomes: String){
         text = nomes,
         fontSize = 24.sp,
         textAlign = TextAlign.End,
-        fontWeight = FontWeight.Black,
         fontFamily = FontFamily.Default,
-        color = Color.Gray,
+        color = Color.White,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 10.dp)
+            .padding(end = 16.dp),
+
     )
 }
+
+
+
 
